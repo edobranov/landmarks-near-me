@@ -80,7 +80,9 @@ app.post('/sendLocation', function(request, response)
 	}
 });
 
-// GET route for the default landing page (return an HTML page)
+// +----------------------------------------+
+// | GET ROUTE TO SEE ALL PREVIOUS REQUESTS |
+// +----------------------------------------+
 app.get('/previousRequests', function(request, response)
 {
 	// Initialize some formatting for the page
