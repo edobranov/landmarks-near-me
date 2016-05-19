@@ -1,0 +1,147 @@
+/*
+	Filename:		main.css
+	Description:	Styling for the boxes, buttons, map, etc in index.html
+	Author:			EVGENI C. DOBRANOV
+	Date:			5/17/2016
+*/
+
+html, body {
+	height: 100vh;
+}
+
+h1 {
+	font-family: 'Old Standard TT', serif;
+	font-size: 4em;
+	color: white;
+}
+
+#desc {
+	font-family: 'Old Standard TT', serif;
+	color: white;
+}
+
+.col-md-12 {
+	background-color: rgba(71, 140, 99, 1);
+}
+
+#map_canvas {
+	border: 1px solid black;
+	margin: 0;
+	padding: 0;
+	height: 70vh;
+}
+
+/* ************************ SLIDER COMPONENTS ************************ */
+input[type=range] {
+  -webkit-appearance: none;
+  margin: 18px 0;
+  width: 100%;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #3071a9;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -14px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #367ebd;
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #3071a9;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+input[type=range]::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  border-width: 16px 0;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: #2a6495;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]::-ms-fill-upper {
+  background: #3071a9;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]::-ms-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #3071a9;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #367ebd;
+}
+/* ************************************************************* */
+
+#spacer {
+	height: 400px;
+}
+
+.col-lg-12 {
+	position: static;
+	
+	padding-top: 10px;
+	height: 100%;
+	bottom: 0;
+
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 100%;
+	font-weight: bold;
+	background-color: rgba(71, 140, 99, 0.8);
+	color: white
+}
+
+#myname {
+	color: rgba(66,202,255,1);
+	text-decoration: underline;
+}

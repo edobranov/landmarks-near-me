@@ -1,0 +1,132 @@
+<!--
+	Filename:		index.html
+	Description:	Send data via XMLHttpRequest, and render data on a map
+	Author:			EVGENI C. DOBRANOV
+	Date:			5/17/2016
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<html>
+
+	<head>
+	
+		<!-- Title to appear in browser tab-->
+		<title>Landmarks Near Me</title>
+
+		<!-- Standard stuff here -->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+
+		<!-- Google Maps API -->
+		<script src="https://maps.googleapis.com/maps/api/js"></script>
+
+		<!-- All the rendering and map processing is done here -->
+		<script src="render.js"></script>
+
+		<!-- jQuery for some more fluid functionality -->
+		<script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
+
+		<!-- Bootstrap CDN for easier designing -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+		<!-- Personalized stylesheet -->
+		<link rel="stylesheet" href="main.css" type="text/css" />
+
+		<!-- Google fonts of choice :) -->
+		<link href='https://fonts.googleapis.com/css?family=Old+Standard+TT' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	
+	</head>
+
+	<body>
+		
+		<!-- The whole body here -->
+		<div class="container-fluid">
+			<div class="row">
+
+				<!-- Main header with the title -->
+				<div class="col-md-12 text-center">
+						<h1>Landmarks Near Me</h1><hr>
+						<h4 id="desc">Search through 18,246 national landmarks in the northeastern US</h4>
+						<br>
+				</div>
+				
+				<!-- Left hand side of things (search boxes, buttons, etc.) -->
+				<div class="col-md-4 text-center">
+					<br>
+					<form>
+						
+						<h4>Enter an address that you'd like to find landmarks near...</h4>
+						<div class="form-group">
+							<input type="text" class="form-control" id="address" placeholder="Example: Empire State Building, Zakim Bridge, etc.">
+						</div>
+						
+						<br>
+
+						<h4>...or enter coordinates of your choosing!</h4>
+						<div class="form-inline">
+							<div class="form-group">
+								<label class="sr-only" for="lat">Or enter coordinates of your choice!</label>
+								<input type="text" class="form-control" id="lat" placeholder="Latitude">
+							</div>
+							<div class="form-group">
+								<input type="text" class="form-control" id="lng" placeholder="Longitude">
+							</div>
+						</div>
+						
+						<br>
+						<button type="button" id="coords" class="btn btn-primary btn-md">Locate my coordinates</button>
+						
+						<br><br>
+						
+						<button type="button" id="clear" class="btn btn-danger btn-md">Clear coordinates</button>
+						
+						<br><br><br>
+
+						<input id="slider" type="range" min="1" max="15" value="8" oninput="distance(this.value)" onchange="distance(this.value)"/>
+	                    <div id="miles">8 mile radius</div>
+	                        <script>
+	                            function distance(d) { document.getElementById("miles").innerHTML = d + " mile radius"; }
+	                        </script>
+
+	                    <br><br>
+
+						<button type="button" class="btn btn-success btn-block btn-lg">Find the landmarks!</button>
+						<br>
+						<p>Note that coordinates take precedence over the address!</p>
+						<br>
+						<button type="button" id="previous" class="btn btn-info btn-md">View all previous requests on this site</button>
+						<br><br><br><br>
+
+					</form>
+					
+				</div>
+
+				<!-- Right hand side of things (the map) -->
+				<div class="col-md-8 text-center">
+					<br>
+					    <div id="map_canvas" class="embed-responsive-item"></div>
+				</div>
+				
+			</div>
+
+			<br><br>
+
+			<!-- The footer -->
+			<div id="footer" class="col-lg-12">
+	                <p>A project by <a href="http://edobranov.github.io" id="myname" target="_blank">Evgeni Dobranov</a></p>
+            </div>
+
+			<!-- Renders the map and adds the listeners to the buttons -->
+			<script>
+				renderMap();
+				myListeners();
+			</script>
+
+		</div>
+		
+	</body>
+	
+</html>

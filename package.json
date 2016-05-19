@@ -1,0 +1,12 @@
+{
+	"name": "Landmarks-Near-Me",
+	"version": "0.0.1",
+	"description": "A Node.js app for finding landmarks near you",
+	"scripts": { "start":"node server.js" },
+	
+	"dependencies": {
+	    "express": "latest",
+	    "mongodb": "latest",
+	    "body-parser": "latest"
+	  }
+}
