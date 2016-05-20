@@ -1,6 +1,6 @@
 // Purpose:   	Front end data processing and Google Maps API rendering for index.html
 // Author:  	EVGENI C. DOBRANOV
-// Date:  		5/17/2016
+// Date:  	5/17/2016
 
 // +-----------------------------------------+
 // | LISTENERS FOR ALL BUTTONS AND TEXTBOXES |
