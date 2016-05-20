@@ -1,10 +1,10 @@
 // Filename:  		server.js
 // Description:   	An app that shows landmarks near the user
 // Author:  		EVGENI C. DOBRANOV
-// Date:  			5/17/2016
+// Date:  		5/17/2016
 
 var express 	= require('express');		// Calls the express module (returns an exports object)
-var app 		= express();				// Defines our app using express
+var app 	= express();				// Defines our app using express
 var bodyParser	= require('body-parser');	// To use HTTP query or post parameters
 
 // Initialize the body parser (lets us get data from POST) and CORS for cross domain accessing of data
