@@ -1,30 +1,30 @@
 # Landmarks Near Me
 
-### Author
+## Author
 
 Evgeni Dobranov
 
-### Description
+## Description
 
 A web app that offers location services (intended for places generally northeast of Pennsylvania) and displays landmarks near that location from the NPS.
 A user can enter a search address just like on Google Maps, or directly input coordinates (including their own ones using the button below the search box). Inputting into either the address box -OR- either of the coordinates boxes will clear the other. If both are filled in after a search, the coordinates take priority.
 
-### Technologies Used
+## Technologies Used
 
-##### Front End
+#### Front End
 
 * __Bootstrap__ (huge leverage in designing the interface)
 * __Google Maps API__ (Map rendering and marking, Regular & Reverse Geocoding)
 * __JavaScript__ + __jQuery__ (All around data processing and event handling)
 * __AJAX__ (XMLHttpRequest Object and communicating with backend)
 
-##### Back End
+#### Back End
 
 * __Node.js__ + __Express Framework__ (Core runtime environment & server framework)
 * __MongoDB__ (Database for storing JSON landmark data and checkins - used via Node.js driver here)
 * __HerokuApp__ (cloud PaaS for hosting)
 
-### Structure Overview
+## Structure Overview
 
 The user is shown an index.html page with search boxes & buttons on the left, and a map on the right. All of the search boxes & buttons have event listeners bound to them, which trigger functions in render.js
 
